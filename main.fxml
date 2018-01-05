@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.CharmListView?>-->
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="845.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <children>
+      <JFXTabPane layoutX="-1.0" layoutY="-1.0" prefHeight="621.0" prefWidth="592.0" stylesheets="@css/main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="254.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Drinks">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="885.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <HBox layoutX="1.0" layoutY="1.0" prefHeight="591.0" prefWidth="604.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="568.0" prefWidth="197.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <ImageView fitHeight="162.0" fitWidth="108.0">
+                                       <image>
+                                          <Image url="@media/images/hotDrinks/Thumb-Americano-En2.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Americano">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$2.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <FlowPane alignment="TOP_CENTER" prefHeight="161.0" prefWidth="197.0" style="-fx-padding: 2px;">
+                                       <children>
+                                          <ImageView fitHeight="162.0" fitWidth="108.0">
+                                             <image>
+                                                <Image url="@media/images/hotDrinks/Thumb-Latte-En2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </FlowPane>
+                                    <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Capuchino">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$2.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="568.0" prefWidth="197.0">
+                                 <children>
+                                    <ImageView fitHeight="162.0" fitWidth="108.0">
+                                       <image>
+                                          <Image url="@media/images/hotDrinks/MoccaThumb.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Moccasino">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$2.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <FlowPane alignment="TOP_CENTER" prefHeight="140.0" prefWidth="197.0" style="-fx-padding: 2px;">
+                                       <children>
+                                          <ImageView fitHeight="162.0" fitWidth="108.0">
+                                             <image>
+                                                <Image url="@media/images/hotDrinks/Thumb-OrangeSpice-En2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </FlowPane>
+                                    <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Tea">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$2.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="568.0" prefWidth="197.0">
+                                 <children>
+                                    <ImageView fitHeight="162.0" fitWidth="108.0">
+                                       <image>
+                                          <Image url="@media/images/hotDrinks/Thumb-Americano-En2.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Brewed Cofee">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$2.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <FlowPane alignment="TOP_CENTER" prefHeight="170.0" prefWidth="197.0">
+                                       <children>
+                                          <ImageView fitHeight="162.0" fitWidth="108.0">
+                                             <image>
+                                                <Image url="@media/images/hotDrinks/Thumb-MatchaGreenTeaLatte-En2.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </FlowPane>
+                                    <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Dolche Coffe">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$2.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Snacks">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="592.0" prefWidth="591.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="568.0" prefWidth="197.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <ImageView fitHeight="200.0" fitWidth="200.0">
+                                       <image>
+                                          <Image url="@media/images/snacks/s1.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Egg Burger">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$5.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <ImageView fitHeight="200.0" fitWidth="200.0">
+                                       <image>
+                                          <Image url="@media/images/snacks/s4.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="TOP_CENTER" prefHeight="81.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Ham Sandwich">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$8.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="568.0" prefWidth="197.0">
+                                 <children>
+                                    <ImageView fitHeight="200.0" fitWidth="200.0">
+                                       <image>
+                                          <Image url="@media/images/snacks/s2.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="TOP_CENTER" prefHeight="74.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="28.0" prefWidth="178.0" text="Bacon Egg Burger">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$5.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <ImageView fitHeight="200.0" fitWidth="200.0">
+                                       <image>
+                                          <Image url="@media/images/snacks/s4.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="TOP_CENTER" prefHeight="81.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="164.0" text="Bacon Sandwich">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$8.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" prefHeight="568.0" prefWidth="197.0">
+                                 <children>
+                                    <ImageView fitHeight="200.0" fitWidth="200.0">
+                                       <image>
+                                          <Image url="@media/images/snacks/s3.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Beef Burger">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$5.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <ImageView fitHeight="200.0" fitWidth="200.0">
+                                       <image>
+                                          <Image url="@media/images/snacks/s5.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox alignment="TOP_CENTER" prefHeight="84.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="33.0" prefWidth="179.0" text="Chicken Sandwich">
+                                             <font>
+                                                <Font name="Roboto Light" size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$8.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="22.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Deserts">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="591.0" prefWidth="592.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="652.0" prefWidth="589.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <HBox prefHeight="621.0" prefWidth="591.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" prefHeight="640.0" prefWidth="197.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <ImageView fitHeight="130.0" fitWidth="130.0">
+                                                   <image>
+                                                      <Image url="@media/images/deserts/1.jpg" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="3.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Cafe Au Lete">
+                                                         <font>
+                                                            <Font name="Roboto Light" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$1.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <ImageView fitHeight="130.0" fitWidth="130.0">
+                                                   <image>
+                                                      <Image url="@media/images/deserts/4.jpg" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="3.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Mocha-almond">
+                                                         <font>
+                                                            <Font name="Roboto Light" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$1.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <ImageView fitHeight="130.0" fitWidth="130.0">
+                                                   <image>
+                                                      <Image url="@media/images/deserts/11.jpg" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="3.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="173.0" text="Chocolate-Cocoa">
+                                                         <font>
+                                                            <Font name="Roboto Light" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$1.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="568.0" prefWidth="197.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <ImageView fitHeight="130.0" fitWidth="130.0">
+                                                   <image>
+                                                      <Image url="@media/images/deserts/2.jpg" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="3.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="172.0" text="Salted Chocolate">
+                                                         <font>
+                                                            <Font name="Roboto Light" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$1.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <ImageView fitHeight="130.0" fitWidth="130.0">
+                                                   <image>
+                                                      <Image url="@media/images/deserts/5.jpg" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="3.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Hibiscus">
+                                                         <font>
+                                                            <Font name="Roboto Light" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$1.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <ImageView fitHeight="130.0" fitWidth="130.0">
+                                                   <image>
+                                                      <Image url="@media/images/deserts/8.jpg" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="3.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Nutella">
+                                                         <font>
+                                                            <Font name="Roboto Light" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$1.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="TOP_CENTER" prefHeight="568.0" prefWidth="197.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <ImageView fitHeight="130.0" fitWidth="130.0">
+                                                   <image>
+                                                      <Image url="@media/images/deserts/3.jpg" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="3.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="28.0" prefWidth="169.0" text="Toasted Coconut">
+                                                         <font>
+                                                            <Font name="Roboto Light" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$1.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <ImageView fitHeight="130.0" fitWidth="130.0">
+                                                   <image>
+                                                      <Image url="@media/images/deserts/6.jpg" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="3.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Passion Fruit">
+                                                         <font>
+                                                            <Font name="Roboto Light" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$1.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <ImageView fitHeight="130.0" fitWidth="130.0">
+                                                   <image>
+                                                      <Image url="@media/images/deserts/9.jpg" />
+                                                   </image>
+                                                   <VBox.margin>
+                                                      <Insets top="3.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <VBox alignment="TOP_CENTER" prefHeight="52.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="33.0" prefWidth="147.0" text="Lemon Poppy">
+                                                         <font>
+                                                            <Font name="Roboto Light" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="44.0" prefWidth="156.0" style="-fx-background-color: #ffffff;">
+                                                         <children>
+                                                            <JFXButton onAction="#onRemoveItem" prefHeight="25.0" prefWidth="41.0" styleClass="circleButton" text="-" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                            <Label alignment="CENTER" prefHeight="44.0" prefWidth="57.0" text="\$1.99" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <JFXButton onAction="#onAddItem" prefHeight="24.0" prefWidth="45.0" styleClass="circleButton" text="+" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="22.0" />
+                                                               </font>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Stats">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="591.0" prefWidth="592.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <VBox prefHeight="592.0" prefWidth="590.0">
+                                 <children>
+                                    <HBox prefHeight="277.0" prefWidth="590.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <VBox prefHeight="478.0" prefWidth="207.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="43.0" prefWidth="207.0" text="Your Shopings">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="478.0" prefWidth="384.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <LineChart fx:id="lineChart" prefHeight="412.0" prefWidth="384.0" VBox.vgrow="ALWAYS">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </LineChart>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="314.0" prefWidth="590.0" style="-fx-background-color: #f5f5f5;">
+                                       <children>
+                                          <VBox prefHeight="225.0" prefWidth="226.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="43.0" prefWidth="233.0" text="Your Preferences">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="225.0" prefWidth="365.0">
+                                             <children>
+                                                <PieChart fx:id="pieChart" prefHeight="307.0" prefWidth="357.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab id="userInfo" closable="false">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="591.0" prefWidth="591.0">
+                           <children>
+                              <HBox alignment="TOP_CENTER" prefHeight="206.0" prefWidth="591.0">
+                                 <children>
+                                    <FlowPane prefHeight="226.0" prefWidth="238.0">
+                                       <children>
+                                          <ImageView fitHeight="206.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@media/images/icons/user.png" />
+                                             </image>
+                                             <FlowPane.margin>
+                                                <Insets left="20.0" top="20.0" />
+                                             </FlowPane.margin>
+                                          </ImageView>
+                                       </children>
+                                    </FlowPane>
+                                    <VBox prefHeight="226.0" prefWidth="353.0">
+                                       <children>
+                                          <HBox prefHeight="55.0" prefWidth="317.0">
+                                             <children>
+                                                <Label text="Name:">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="userName" prefHeight="26.0" prefWidth="277.0" text="Name" textFill="#58b2d0">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" top="30.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="56.0" prefWidth="317.0">
+                                             <children>
+                                                <Label text="Surname:">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="userSurname" prefHeight="26.0" prefWidth="249.0" text="Surname" textFill="#58b2d0">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" top="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="49.0" prefWidth="216.0">
+                                             <children>
+                                                <Label text="Email address:">
+                                                   <font>
+                                                      <Font size="20.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets top="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="email" prefHeight="20.0" prefWidth="199.0" text="Email address" textFill="#58b2d0">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" top="24.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="66.0" prefWidth="317.0">
+                                             <children>
+                                                <JFXButton prefHeight="43.0" prefWidth="138.0" style="-fx-background-color: lightgray;" text="change info">
+                                                   <HBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton prefHeight="43.0" prefWidth="146.0" text="change password" textFill="#d70c0c" underline="true">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label text="Your Orders">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <JFXTreeTableView fx:id="treeView" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="491.0" stylesheets="@css/main.css">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </JFXTreeTableView>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <VBox layoutX="591.0" layoutY="-1.0" prefHeight="621.0" prefWidth="253.0" style="-fx-border-color: gray; -fx-border-style: dashed; -fx-border-width: 3px;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="625.0" prefWidth="253.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Your Order">
+                     <font>
+                        <Font name="Roboto" size="34.0" />
+                     </font>
+                  </Label>
+                  <JFXListView fx:id="list" prefHeight="396.0" prefWidth="244.0">
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                  </JFXListView>
+                  <VBox prefHeight="180.0" prefWidth="247.0">
+                     <children>
+                        <HBox prefHeight="145.0" prefWidth="247.0">
+                           <children>
+                              <VBox prefHeight="123.0" prefWidth="167.0">
+                                 <children>
+                                    <Label text="Tax:">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Label text="Total Price:">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="123.0" prefWidth="155.0" style="-fx-border-top: 5px black;">
+                                 <children>
+                                    <Label fx:id="tax" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="117.0" text="\$0,00">
+                                       <VBox.margin>
+                                          <Insets bottom="14.0" right="10.0" top="14.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="totalPrice" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="117.0" text="\$0,00">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets right="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="76.0" prefWidth="247.0">
+                           <children>
+                              <JFXButton onAction="#onCancel" prefHeight="55.0" prefWidth="129.0" style="-fx-background-color: #da1515;" text="Cancel" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Light" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton onAction="#onSubmit" prefHeight="55.0" prefWidth="127.0" style="-fx-background-color: #469451;" text="Submit Order" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Light" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <!--<CharmListView layoutX="591.0" prefHeight="622.0" prefWidth="254.0" />-->
+   </children>
+</AnchorPane>
